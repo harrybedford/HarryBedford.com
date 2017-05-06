@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "stylus": "stylus --compress ./src/stylus/main.styl -o ./src/stylus.css",
+    "watch:stylus": "onchange \"./src/**/*.styl\" -- npm run stylus"
   },
   "private": true,
   "dependencies": {
@@ -17,11 +19,14 @@
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
+    "@angular/material": "^2.0.0-beta.3",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
+    "kouto-swiss": "^1.1.0",
+    "lodash": "^4.17.4",
+    "rxjs": "^5.2.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -35,9 +40,11 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
